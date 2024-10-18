@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="html" href="sidebar.html">
+    <link rel="icon" type="x-icon" href="wizard.jpg">
+    <title>Shunnycakes</title>
+    
+    <script> 
+    // navbar shrink effect
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "30px 10px";
+            document.getElementById("logo").style.fontSize = "25px";
+        } else {
+            document.getElementById("navbar").style.padding = "80px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+    </script>
+</head>
+
+<body style="color: #3a015c; background-color: #f7ecf5;">
+    <div id="navbar">
+        <a href="shunny.html" id="logo">⊹Shunnycakes⊹</a>
+        <div id="navbar-right">
+            <a href="login.html">⊹Log Out⊹</a>
+            <a href="gallery.html">⊹Gallery⊹</a>
+            <a href="about.html">⊹About⊹</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 class="greeting">HEEEELLOOOOO!!! (> w <)</h1>
+        <p><b>My name is Jayryl Shann Agustin, call me Shann for short~</b></p>
+        <p>I'm currently studying Bachelor of Science Major in Information Technology at Quezon City University >:3</p>
+        <p>And you're currently viewing my webpage :D</p>
+        <p>For starters, here's a lil' info about me!</p>
+    </div>
+
+    <!-- My Pictures  -->
+    <div class="image-section">
+        <div class="image-card">
+            <img src="shani.jpg" alt="shani" class="image">
+            <p class="image-description">This is me, 14 years ago. I think mom took this picture at New Year's Eve.. I was only 6 years old. I was a huge fan of 'Dora'. My mom bought me Dora slippers (yes, the one you're seeing right now on your screen lol).</p>
+        </div>
+        <div class="image-card">
+            <img src="shanii.jpg" alt="shanni" class="image">
+            <p class="image-description">Annd this is me now, The 19 years old Shann.</p> 
+        </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="content2">
+        <img src="hihi.jpg" alt="kuromi">
+        <p>A lot has changed in the past 14 years—the house, the people, and especially me. The only thing that hasn't changed,
+           I guess, it's my skills in art. I love making art; I even made a Twitter account just for my artwork :3<br> 
+        ps..you can click my name above to see a vid of my art (A timelapse vid of my artworks)</p>
+    </div>
+
+    <div class="footer">
+        <p>𝕏 kirarii06 ✉ agustin.jayrylshann@gmail.com</p>
+    </div>
+</body>
+</html>

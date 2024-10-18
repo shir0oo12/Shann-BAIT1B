@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" type="x-icon" href="wizard.jpg">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7ecf5;
+    color: #3a015c;
+  }
+
+  /* video */
+  #myVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: -1; /* Behind content */
+    filter: brightness(80%) contrast(110%);
+  }
+
+  /* Content overlay*/
+  .content {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background: rgba(204, 178, 221, 0.7); /* overlay */
+    color: #3a015c;
+    width: 300px;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Headline and paragraph */
+  .content h1 {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Button*/
+  #myBtn {
+    width: 120px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #c6a9ca;
+    color: #3a015c;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #myBtn:hover {
+    background-color: #da99ff;
+    transform: translateY(-3px);
+  }
+
+  @media screen and (max-width: 580px) {
+    .content {
+      width: 90%;
+      left: 5%;
+      bottom: 5%;
+    }
+
+    .content h1 {
+      font-size: 1.6rem;
+    }
+
+    .content p {
+      font-size: 0.9rem;
+    }
+
+    #myBtn {
+      width: 100px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="yesyes.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1>My Original Character</h1>
+  <p>I made this artwork 2 years ago. While waiting for my next class (online class), I got bored so, I made this instead.
+    On this day, I still want to make this kind of artstyle but I just couldn't make it anymore(╥_╥)</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>

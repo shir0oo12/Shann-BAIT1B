@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="x-icon" href="wizard.jpg">
+    <title>Gallery</title>
+    <style>
+      body {
+    background-image: url("bg1.jpg");
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  body, html {
+    margin: 0;
+    height: 100%;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .gallery-grid img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+  }
+
+  .placeholder {
+    background: rgb(241, 235, 227);
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: 1rem;
+    font-size: 5rem;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-grid">
+      <div class="image1"><img src="blue.png" alt="1"></div>
+      <div class="image2"><img src="debut.png" alt="2"></div>
+      <div class="image3"><img src="kobeniii.png" alt="3"></div>
+      <div class="image4"><img src="MIIIKUUUUUUUU DAYOOOO.png" alt="4"></div>
+      <div class="image5"><img src="mommy kooo.png" alt="5"></div>
+      <div class="image6"><img src="tomieee.jpg" alt="6"></div>
+    </div>
+  </body>
+</html>

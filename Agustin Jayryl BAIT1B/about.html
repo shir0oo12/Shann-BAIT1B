@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x-icon" href="wizard.jpg">
+    <title>About Me</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-image: url("bg1.jpg"); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: rgba(240, 240, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #5e478d;
+            margin-bottom: 20px;
+        }
+
+        p.intro {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .chat-box {
+            margin: 0 auto;
+        }
+
+        .chat-box .message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .chat-box .message .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .chat-box .message.left {
+            flex-direction: row;
+        }
+
+        .chat-box .message.right {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .chat-box .message .text {
+            background-color: #f7f7f7;
+            padding: 15px 20px;
+            border-radius: 12px;
+            max-width: 70%;
+            position: relative;
+        }
+
+        .chat-box .message.right .text {
+            background-color: #e0d4f7;
+        }
+
+        .chat-box .message .time {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* Chat input area */
+        .chat-input {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .chat-input input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-input button {
+            padding: 10px 20px;
+            background-color: #5e478d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .chat-input button:hover {
+            background-color: #4b3878;
+        }
+
+        /* Toggle button for more interests */
+        .toggle-button {
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: #5e478d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .toggle-button:hover {
+            background-color: #4b3878;
+        }
+
+        /* Hidden interests */
+        #more-interests {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        /* Improved responsive design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .chat-box .message .text {
+                max-width: 100%;
+                font-size: 0.9rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> ✮ About Shann (˶˃ ᵕ ˂˶)</h1>
+        <p class="intro">
+            Hi! I’m Shann (shunny)! I really enjoy drawing, listening to music, and learning about coding. Whether I’m working on a new drawing or playing my ukulele, I love finding different ways to be creative. I’m always learning new things, and I’m excited to share what I love with you!
+
+
+        </p>
+
+        <!-- Toggle buttonz -->
+        <button class="toggle-button" onclick="toggleInterests()">See More of my Interests•ﻌ•</button>
+
+        <!-- Hidden content for more interests -->
+        <div id="more-interests">
+            <p style="text-align: center;">⊹₊⟡⋆I also love to sing, and sometimes take a power nap whenever I get a chance to sleep o_O⊹₊⟡⋆</p>
+            <p style="text-align: center;">⊹₊⟡⋆I love experimenting and exploring things in coding!⊹₊⟡⋆</p>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            <div class="message left">
+                <img src="yep.jpg" alt="Avatar" class="avatar">
+                <div class="text">
+                    <p>Did you know? Shann loves to draw!</p>
+                    <span class="time">11:00</span>
+                </div>
+            </div>
+
+            <div class="message right">
+                <img src="yup.jpg" alt="Avatar" class="avatar">
+                <div class="text">
+                    <p>Hmm, I know that already... anything else?</p>
+                    <span class="time">11:01</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input for user to add messages -->
+        <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Try typing any text here...˚ʚ♡ɞ˚">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Try
+        function toggleInterests() {
+            const interests = document.getElementById("more-interests");
+            if (interests.style.display === "none") {
+                interests.style.display = "block";
+            } else {
+                interests.style.display = "none";
+            }
+        }
+
+        // try
+        function sendMessage() {
+            const chatBox = document.getElementById('chat-box');
+            const userMessage = document.getElementById('userMessage').value;
+            
+            if (userMessage.trim() === "") return;
+
+            //user's message to the chat
+            const userChat = `
+                <div class="message right">
+                    <img src="yup.jpg" alt="Avatar" class="avatar">
+                    <div class="text">
+                        <p>${userMessage}</p>
+                        <span class="time">${new Date().toLocaleTimeString()}</span>
+                    </div>
+                </div>
+            `;
+            chatBox.innerHTML += userChat;
+            document.getElementById('userMessage').value = "";
+
+            // type 
+            setTimeout(() => {
+                const botResponse = `
+                    <div class="message left">
+                        <img src="yep.jpg" alt="Avatar" class="avatar">
+                        <div class="text">
+                            <p>That's cool!</p>
+                            <span class="time">${new Date().toLocaleTimeString()}</span>
+                        </div>
+                    </div>
+                `;
+                chatBox.innerHTML += botResponse;
+                chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
+            }, 1000);
+        }
+        
+    </script> 
+</body>
+</html>
